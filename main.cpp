@@ -1,12 +1,11 @@
 #include <iostream>
 #include <FileReader.hpp>
+#include <CalorieCounter.hpp>
 
 int main() {
 
-    std::string content;
-    FileReader input(INPUT_FILE);
-    input.get_file_content(content);
+    CalorieCounter cc{std::make_shared<FileReader>(INPUT_FILE)};
 
 
-    std::cout << content;
+    std::cout << cc.execute();
 }

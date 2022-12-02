@@ -1,3 +1,5 @@
+#ifndef _FILEREADER_H_
+#define _FILEREADER_H_
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -15,3 +17,5 @@ public:
         content = m_file_content;
     }
 };
+
+#endif // _FILEREADER_H_

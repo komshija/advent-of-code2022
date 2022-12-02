@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(source 
     main.cpp
     src/FileReader.cpp
+    src/CalorieCounter.cpp
 )
 
 add_definitions(-DINPUT_FILE="${CMAKE_CURRENT_SOURCE_DIR}/input.txt")
