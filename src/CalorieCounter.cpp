@@ -3,7 +3,7 @@
 CalorieCounter::CalorieCounter(std::shared_ptr<FileReader> file_reader) :
  m_file_reader(file_reader) {}
 
-std::priority_queue<int> CalorieCounter::execute() {
+int CalorieCounter::sum_of_top_max_calories(int num = 1) {
     std::string input;
     m_file_reader->get_file_content(input);
     std::stringstream ss(input);
@@ -19,5 +19,11 @@ std::priority_queue<int> CalorieCounter::execute() {
         acc += atoi(line.c_str());
     }
 
-    return max;
+    acc = 0;
+    for(int i{0}; i < num; ++i)  {
+        acc += max.top();
+        max.pop();
+    }
+
+    return acc;
 }

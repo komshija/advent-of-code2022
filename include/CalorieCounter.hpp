@@ -11,6 +11,6 @@ private:
 public:
     CalorieCounter(std::shared_ptr<FileReader> file_reader);
     ~CalorieCounter() = default;
-    std::priority_queue<int> execute();
+    int sum_of_top_max_calories(int num = 1);
 };
 #endif // _CALORIECOUNTER_H_
