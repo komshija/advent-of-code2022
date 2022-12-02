@@ -2,6 +2,7 @@
 #define _CALORIECOUNTER_H_
 #include <FileReader.hpp>
 #include <memory>
+#include <queue>
 
 class CalorieCounter
 {
@@ -10,6 +11,6 @@ private:
 public:
     CalorieCounter(std::shared_ptr<FileReader> file_reader);
     ~CalorieCounter() = default;
-    std::string execute();
+    std::priority_queue<int> execute();
 };
 #endif // _CALORIECOUNTER_H_

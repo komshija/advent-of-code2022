@@ -12,7 +12,7 @@ set(source
     src/CalorieCounter.cpp
 )
 
-add_definitions(-DINPUT_FILE="${CMAKE_CURRENT_SOURCE_DIR}/input.txt")
+add_definitions(-DINPUT_FILE_DAY1="${CMAKE_CURRENT_SOURCE_DIR}/input.txt")
 
 add_executable(${target} ${source})
 
