@@ -1,10 +1,8 @@
 #include <RockPaperScissors.hpp>
-#include <iostream>
 
-RockPaperScissors::RockPaperScissors(std::shared_ptr<FileReader> file_reader) :
- m_file_reader(file_reader) 
+RockPaperScissors::RockPaperScissors(std::string file_path) :
+ m_file_path(file_path) 
  {
-
    // A X - rock
    // B Y - paper
    // C Z - scissors
@@ -35,9 +33,7 @@ RockPaperScissors::RockPaperScissors(std::shared_ptr<FileReader> file_reader) :
  }
 
  int RockPaperScissors::execute_part1() {
-    std::string input;
-    m_file_reader->get_file_content(input);
-    std::stringstream ss(input);
+    std::stringstream ss(FileReader::get_file_content(m_file_path));
     
     int res = 0;
     for(std::string line; std::getline(ss, line);) {
@@ -47,10 +43,8 @@ RockPaperScissors::RockPaperScissors(std::shared_ptr<FileReader> file_reader) :
     return res;
  }
 
-  int RockPaperScissors::execute_part2() {
-    std::string input;
-    m_file_reader->get_file_content(input);
-    std::stringstream ss(input);
+ int RockPaperScissors::execute_part2() {
+    std::stringstream ss(FileReader::get_file_content(m_file_path));
     
     int res = 0;
     for(std::string line; std::getline(ss, line);) {
@@ -59,3 +53,10 @@ RockPaperScissors::RockPaperScissors(std::shared_ptr<FileReader> file_reader) :
 
     return res;
  }
+
+ void RockPaperScissors::print_solution() {
+     std::cout << "=== Day 2 ===" << std::endl;
+     std::cout << execute_part1() << std::endl;
+     std::cout << execute_part2() << std::endl;
+     std::cout << std::endl;
+}

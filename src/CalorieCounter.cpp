@@ -1,12 +1,10 @@
 #include <CalorieCounter.hpp>
 
-CalorieCounter::CalorieCounter(std::shared_ptr<FileReader> file_reader) :
- m_file_reader(file_reader) {}
+CalorieCounter::CalorieCounter(std::string file) :
+ m_file_path(file) {}
 
 int CalorieCounter::sum_of_top_max_calories(int num) {
-    std::string input;
-    m_file_reader->get_file_content(input);
-    std::stringstream ss(input);
+    std::stringstream ss(FileReader::get_file_content(m_file_path));
     std::priority_queue<int> max;
 
     int acc = 0;
@@ -26,4 +24,11 @@ int CalorieCounter::sum_of_top_max_calories(int num) {
     }
 
     return acc;
+}
+
+void CalorieCounter::print_solution() {
+     std::cout << "=== Day 1 ===" << std::endl;
+     std::cout << sum_of_top_max_calories() << std::endl;
+     std::cout << sum_of_top_max_calories(3) << std::endl;
+     std::cout << std::endl;
 }
