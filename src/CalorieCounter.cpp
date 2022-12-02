@@ -3,7 +3,7 @@
 CalorieCounter::CalorieCounter(std::shared_ptr<FileReader> file_reader) :
  m_file_reader(file_reader) {}
 
-int CalorieCounter::sum_of_top_max_calories(int num = 1) {
+int CalorieCounter::sum_of_top_max_calories(int num) {
     std::string input;
     m_file_reader->get_file_content(input);
     std::stringstream ss(input);
