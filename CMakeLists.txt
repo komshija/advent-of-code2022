@@ -10,6 +10,7 @@ set(source
     main.cpp
     src/FileReader.cpp
     src/CalorieCounter.cpp
+    src/RockPaperScissors.cpp
 )
 
 add_definitions(-DINPUT_FILE_DAY1="${CMAKE_CURRENT_SOURCE_DIR}/input/day1_input.txt")
