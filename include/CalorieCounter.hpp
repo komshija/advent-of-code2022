@@ -1,8 +1,6 @@
 #ifndef _CALORIECOUNTER_H_
 #define _CALORIECOUNTER_H_
-#include <FileReader.hpp>
 #include <Solution.hpp>
-#include <memory>
 #include <queue>
 
 class CalorieCounter : public Solution

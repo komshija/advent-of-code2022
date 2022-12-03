@@ -1,8 +1,7 @@
 #ifndef _ROCKPAPERSCISSORS_H_
 #define _ROCKPAPERSCISSORS_H_
-#include <FileReader.hpp>
+
 #include <Solution.hpp>
-#include <memory>
 #include <map>
 
 

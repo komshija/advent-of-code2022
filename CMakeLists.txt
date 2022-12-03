@@ -11,10 +11,12 @@ set(source
     src/FileReader.cpp
     src/CalorieCounter.cpp
     src/RockPaperScissors.cpp
+    src/RucksackReorganization.cpp
 )
 
 add_definitions(-DINPUT_FILE_DAY1="${CMAKE_CURRENT_SOURCE_DIR}/input/day1_input.txt")
 add_definitions(-DINPUT_FILE_DAY2="${CMAKE_CURRENT_SOURCE_DIR}/input/day2_input.txt")
+add_definitions(-DINPUT_FILE_DAY3="${CMAKE_CURRENT_SOURCE_DIR}/input/day3_input.txt")
 
 add_executable(${target} ${source})
 
