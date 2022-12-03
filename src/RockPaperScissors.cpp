@@ -1,5 +1,7 @@
 #include <RockPaperScissors.hpp>
 
+namespace adventofcode {
+
 RockPaperScissors::RockPaperScissors(std::string file_path)
     : m_file_path(file_path) {
   // A X - rock
@@ -32,7 +34,7 @@ RockPaperScissors::RockPaperScissors(std::string file_path)
 }
 
 int RockPaperScissors::execute_part1() {
-  std::stringstream ss(FileReader::get_file_content(m_file_path));
+  std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
 
   int res = 0;
   for (std::string line; std::getline(ss, line);) {
@@ -43,7 +45,7 @@ int RockPaperScissors::execute_part1() {
 }
 
 int RockPaperScissors::execute_part2() {
-  std::stringstream ss(FileReader::get_file_content(m_file_path));
+  std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
 
   int res = 0;
   for (std::string line; std::getline(ss, line);) {
@@ -59,3 +61,5 @@ void RockPaperScissors::print_solution() {
   std::cout << execute_part2() << std::endl;
   std::cout << std::endl;
 }
+
+}  // namespace adventofcode

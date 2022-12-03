@@ -1,8 +1,9 @@
 #ifndef _RUCKSACK_REOGRANIZATION_H_
 #define _RUCKSACK_REOGRANIZATION_H_
-
 #include <Solution.hpp>
 #include <functional>
+
+namespace adventofcode {
 
 class RucksackReorganization : public Solution {
  private:
@@ -21,4 +22,5 @@ class RucksackReorganization : public Solution {
   int execute_part2();
 };
 
+}  // namespace adventofcode
 #endif  // _RUCKSACK_REOGRANIZATION_H_

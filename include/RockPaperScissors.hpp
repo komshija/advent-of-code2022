@@ -1,8 +1,9 @@
 #ifndef _ROCKPAPERSCISSORS_H_
 #define _ROCKPAPERSCISSORS_H_
-
 #include <Solution.hpp>
 #include <map>
+
+namespace adventofcode {
 
 class RockPaperScissors : public Solution {
  private:
@@ -19,4 +20,6 @@ class RockPaperScissors : public Solution {
   int execute_part1();
   int execute_part2();
 };
+
+}  // namespace adventofcode
 #endif  // _ROCKPAPERSCISSORS_H_

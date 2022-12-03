@@ -1,4 +1,7 @@
-#include "FileReader.hpp"
+#include <FileReader.hpp>
+
+namespace adventofcode {
+namespace utils {
 
 std::string FileReader::get_file_content(std::string file_path) {
   std::ifstream stream;
@@ -12,3 +15,6 @@ std::string FileReader::get_file_content(std::string file_path) {
     throw new std::runtime_error("Can't open file");
   }
 }
+
+}  // namespace utils
+}  // namespace adventofcode

@@ -2,6 +2,8 @@
 #include <array>
 #include <vector>
 
+namespace adventofcode {
+
 RucksackReorganization::RucksackReorganization(std::string file_path)
     : m_file_path(file_path),
       m_contains([](std::string str, char ch) -> bool {
@@ -12,7 +14,7 @@ RucksackReorganization::RucksackReorganization(std::string file_path)
       }) {}
 
 int RucksackReorganization::execute_part1() {
-  std::stringstream ss(FileReader::get_file_content(m_file_path));
+  std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
   int acc = 0;
   for (std::string line; std::getline(ss, line);) {
     std::string first{line.substr(0, line.length() / 2)};
@@ -29,7 +31,7 @@ int RucksackReorganization::execute_part1() {
 }
 
 int RucksackReorganization::execute_part2() {
-  std::stringstream ss(FileReader::get_file_content(m_file_path));
+  std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
   std::vector<std::string> lines;
   int acc = 0;
   for (std::string line; std::getline(ss, line);) {
@@ -59,3 +61,5 @@ void RucksackReorganization::print_solution() {
   std::cout << execute_part2() << std::endl;
   std::cout << std::endl;
 }
+
+}  // namespace adventofcode
