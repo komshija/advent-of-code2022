@@ -8,3 +8,4 @@ Solutions for a problems located [here](https://adventofcode.com/2022).
 - Day 1 ♦ Calories counter
 - Day 2 ♦ Rock Paper Scissors
 - Day 3 ♦ Rucksack Reorganization
+- Day 4 ♦ Camp Cleanup
