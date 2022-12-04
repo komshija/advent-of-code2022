@@ -8,7 +8,7 @@ int CalorieCounter::sum_of_top_max_calories(int num) {
   std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
   std::priority_queue<int> max;
 
-  int acc = 0;
+  auto acc{0};
   for (std::string line; std::getline(ss, line);) {
     if (line.empty()) {
       max.emplace(acc);

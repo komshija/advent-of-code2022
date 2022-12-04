@@ -36,7 +36,7 @@ RockPaperScissors::RockPaperScissors(std::string file_path)
 int RockPaperScissors::execute_part1() {
   std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
 
-  int res = 0;
+  int res{0};
   for (std::string line; std::getline(ss, line);) {
     res += m_calculation[line];
   }
@@ -47,7 +47,7 @@ int RockPaperScissors::execute_part1() {
 int RockPaperScissors::execute_part2() {
   std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
 
-  int res = 0;
+  int res{0};
   for (std::string line; std::getline(ss, line);) {
     res += m_calculation[m_transformation[line]];
   }

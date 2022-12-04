@@ -38,9 +38,9 @@ int RucksackReorganization::execute_part2() {
     lines.push_back(line);
 
     if (lines.size() == 3) {
-      auto first = lines[0];
-      auto second = lines[1];
-      auto third = lines[2];
+      auto first {lines[0]};
+      auto second {lines[1]};
+      auto third {lines[2]};
 
       for (auto& ch : first) {
         if (m_contains(second, ch) && m_contains(third, ch)) {
