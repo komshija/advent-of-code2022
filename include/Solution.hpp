@@ -2,7 +2,6 @@
 #define _SOLUTION_H_
 #include <FileReader.hpp>
 #include <iostream>
-
 namespace adventofcode {
 
 class Solution {

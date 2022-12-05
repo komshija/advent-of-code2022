@@ -7,7 +7,6 @@ namespace adventofcode {
 class CalorieCounter : public Solution {
  private:
   std::string m_file_path;
-
  public:
   CalorieCounter(std::string file_path);
   ~CalorieCounter() = default;

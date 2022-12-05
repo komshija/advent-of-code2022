@@ -5,7 +5,6 @@
 #include <functional>
 #include <stack>
 #include <vector>
-
 namespace adventofcode {
 
 class SupplyStacks : public Solution {
@@ -16,16 +15,12 @@ class SupplyStacks : public Solution {
     int from_stack;
     int to_stack;
   };
-
  public:
   SupplyStacks(std::string file_path);
   ~SupplyStacks() = default;
-
   std::string execute_part1() override;
   std::string execute_part2() override;
   int day() override { return 5; }
-
-
  private:
   std::string execute_common(std::function<void(std::vector<std::stack<char>>&, Movement&)>);
 };
