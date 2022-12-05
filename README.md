@@ -4,6 +4,7 @@ Solutions for a problems located [here](https://adventofcode.com/2022).
 
 + Language: C++
 + Build system: CMake
++ Compailer: Clang 14.0.0
 
 - Day 1 ♦ Calories Counter 🥩
 - Day 2 ♦ Rock Paper Scissors 🪨 📜 ✂️
