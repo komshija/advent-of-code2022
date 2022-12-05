@@ -5,7 +5,8 @@ Solutions for a problems located [here](https://adventofcode.com/2022).
 + Language: C++
 + Build system: CMake
 
-- Day 1 ♦ Calories counter
-- Day 2 ♦ Rock Paper Scissors
-- Day 3 ♦ Rucksack Reorganization
-- Day 4 ♦ Camp Cleanup
+- Day 1 ♦ Calories Counter 🥩
+- Day 2 ♦ Rock Paper Scissors 🪨 📜 ✂️
+- Day 3 ♦ Rucksack Reorganization 🎒
+- Day 4 ♦ Camp Cleanup 🏕️
+- Day 5 ♦ Supply Stacks 📦
