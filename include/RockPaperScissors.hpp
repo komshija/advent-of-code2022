@@ -14,11 +14,11 @@ class RockPaperScissors : public Solution {
  public:
   RockPaperScissors(std::string file_path);
   ~RockPaperScissors() = default;
-  void print_solution() override;
 
- private:
-  int execute_part1();
-  int execute_part2();
+  std::string execute_part1() override;
+  std::string execute_part2() override;
+
+  int day() override { return 2; }
 };
 
 }  // namespace adventofcode

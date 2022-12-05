@@ -23,10 +23,10 @@ class CampCleanup : public Solution {
   CampCleanup(std::string file_path);
   ~CampCleanup() = default;
 
-  int execute_part1();
-  int execute_part2();
+  std::string execute_part1() override;
+  std::string execute_part2() override;
 
-  void print_solution() override;
+  int day() override { return 4; }
 };
 
 }  // namespace adventofcode

@@ -15,11 +15,9 @@ class RucksackReorganization : public Solution {
   RucksackReorganization(std::string file_path);
   ~RucksackReorganization() = default;
 
-  void print_solution() override;
-
- private:
-  int execute_part1();
-  int execute_part2();
+  std::string execute_part1() override;
+  std::string execute_part2() override;
+  int day() override { return 3; }
 };
 
 }  // namespace adventofcode

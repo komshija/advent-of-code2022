@@ -13,7 +13,7 @@ RucksackReorganization::RucksackReorganization(std::string file_path)
         return isupper(ch) ? (27 + ch - 'A') : (ch - 'a' + 1);
       }) {}
 
-int RucksackReorganization::execute_part1() {
+std::string RucksackReorganization::execute_part1() {
   std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
   int acc = 0;
   for (std::string line; std::getline(ss, line);) {
@@ -27,10 +27,10 @@ int RucksackReorganization::execute_part1() {
       }
     }
   }
-  return acc;
+  return std::to_string(acc);
 }
 
-int RucksackReorganization::execute_part2() {
+std::string RucksackReorganization::execute_part2() {
   std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
   std::vector<std::string> lines;
   int acc = 0;
@@ -52,14 +52,7 @@ int RucksackReorganization::execute_part2() {
       lines.clear();
     }
   }
-  return acc;
-}
-
-void RucksackReorganization::print_solution() {
-  std::cout << "=== Day 3 ===" << std::endl;
-  std::cout << execute_part1() << std::endl;
-  std::cout << execute_part2() << std::endl;
-  std::cout << std::endl;
+  return std::to_string(acc);
 }
 
 }  // namespace adventofcode

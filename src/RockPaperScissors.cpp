@@ -33,7 +33,7 @@ RockPaperScissors::RockPaperScissors(std::string file_path)
   m_transformation["C Z"] = "C X";
 }
 
-int RockPaperScissors::execute_part1() {
+std::string RockPaperScissors::execute_part1() {
   std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
 
   int res{0};
@@ -41,10 +41,10 @@ int RockPaperScissors::execute_part1() {
     res += m_calculation[line];
   }
 
-  return res;
+  return std::to_string(res);
 }
 
-int RockPaperScissors::execute_part2() {
+std::string RockPaperScissors::execute_part2() {
   std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
 
   int res{0};
@@ -52,14 +52,7 @@ int RockPaperScissors::execute_part2() {
     res += m_calculation[m_transformation[line]];
   }
 
-  return res;
-}
-
-void RockPaperScissors::print_solution() {
-  std::cout << "=== Day 2 ===" << std::endl;
-  std::cout << execute_part1() << std::endl;
-  std::cout << execute_part2() << std::endl;
-  std::cout << std::endl;
+  return std::to_string(res);
 }
 
 }  // namespace adventofcode

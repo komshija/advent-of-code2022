@@ -8,9 +8,9 @@ CampCleanup::CampCleanup(std::string file_path)
         typedef std::pair<std::string, std::string> string_pair_t;
         
         auto split {[](std::string input, char delimiter) -> string_pair_t {
-          auto comma_pos = input.find(delimiter);
-          return {input.substr(0, comma_pos),
-                  input.substr(comma_pos + 1, input.length() - comma_pos)};
+          auto delimiter_pos = input.find_first_of(delimiter);
+          return {input.substr(0, delimiter_pos),
+                  input.substr(delimiter_pos + 1, input.length() - delimiter_pos)};
         }};
 
         auto string_to_section { [](string_pair_t value) -> section_t {
@@ -33,31 +33,25 @@ CampCleanup::CampCleanup(std::string file_path)
                std::min(value.first.second, value.second.second);
       }) {}
 
-int CampCleanup::execute_part1() {
+std::string CampCleanup::execute_part1() {
   std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
   auto acc {0};
   for (std::string line; std::getline(ss, line);) {
     if (m_is_full_intersection(m_parse(line)))
       acc++;
   }
-  return acc;
+  return std::to_string(acc);
 }
 
-int CampCleanup::execute_part2() {
+std::string CampCleanup::execute_part2() {
   std::stringstream ss(utils::FileReader::get_file_content(m_file_path));
   auto acc {0};  
   for (std::string line; std::getline(ss, line);) {
     if (m_is_intersection(m_parse(line)))
       acc++;
   }
-  return acc;
+  return std::to_string(acc);
 }
 
-void CampCleanup::print_solution() {
-  std::cout << "=== Day 4 ===" << std::endl;
-  std::cout << execute_part1() << std::endl;
-  std::cout << execute_part2() << std::endl;
-  std::cout << std::endl;
-}
 
 }  // namespace adventofcode

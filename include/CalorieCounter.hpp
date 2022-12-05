@@ -11,8 +11,9 @@ class CalorieCounter : public Solution {
  public:
   CalorieCounter(std::string file_path);
   ~CalorieCounter() = default;
-  void print_solution() override;
-
+  std::string execute_part1() override { return std::to_string(sum_of_top_max_calories(1)); }
+  std::string execute_part2() override { return std::to_string(sum_of_top_max_calories(3)); }
+  int day() override { return 1; }
  private:
   int sum_of_top_max_calories(int num = 1);
 };

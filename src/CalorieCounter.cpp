@@ -27,11 +27,4 @@ int CalorieCounter::sum_of_top_max_calories(int num) {
   return acc;
 }
 
-void CalorieCounter::print_solution() {
-  std::cout << "=== Day 1 ===" << std::endl;
-  std::cout << sum_of_top_max_calories() << std::endl;
-  std::cout << sum_of_top_max_calories(3) << std::endl;
-  std::cout << std::endl;
-}
-
 }  // namespace adventofcode
