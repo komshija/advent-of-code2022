@@ -11,3 +11,4 @@ Solutions for a problems located [here](https://adventofcode.com/2022).
 - Day 3 ♦ Rucksack Reorganization 🎒
 - Day 4 ♦ Camp Cleanup 🏕️
 - Day 5 ♦ Supply Stacks 📦
+- Day 6 ♦ Tuning Trouble 📻
